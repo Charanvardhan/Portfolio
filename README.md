@@ -1,13 +1,10 @@
-[![Stargazers][stars-shield]][stars-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-[![GLP-3.0 License][license-shield]][license-url]
+
 
 <!-- PROJECT LOGO -->
 <br />
 <samp>
 <p align="center">
-  <a href="https://silasrodrigues.vercel.app">
+  <a href="https://charanvardhan.github.io/Portfolio/">
     <img src="assets/img/logo-large.svg" alt="Logo" height="40">
   </a>
 
@@ -16,7 +13,7 @@
   <p align="center">
     Portfolio to show my projects.
     <br />
-    <a href="https://silasrodrigues.vercel.app"><strong>View Demo »</strong></a>
+    <a href="https://charanvardhan.github.io/Portfolio/"><strong>View Demo »</strong></a>
     <br />
   </p>
 </p>
@@ -40,7 +37,6 @@
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -51,25 +47,21 @@
 
 ### Desktop View
 
-## [![About View Desktop][product-screenshot9]](https://silasrodrigues.vercel.app)
+## [![About View Desktop][product-screenshot9]](https://charanvardhan.github.io/Portfolio/)
 
 ### Desktop Dark View
 
-## [![About View Desktop][product-screenshot]](https://silasrodrigues.vercel.app)
+## [![About View Desktop][product-screenshot]](https://charanvardhan.github.io/Portfolio/)
 
 ### Desktop Light View
 
-## [![About View Desktop][product-screenshot8]](https://silasrodrigues.vercel.app)
+## [![About View Desktop][product-screenshot8]](https://charanvardhan.github.io/Portfolio/)
 
 ### 404 View
 
-[![About View 404][product-screenshot2]](https://silasrodrigues.vercel.app/Example404)
+[![About View 404][product-screenshot2]](https://charanvardhan.github.io/Portfolio/Example404)
 
-### Mail Message View
 
-###### NOTE: Due to the site being hosted on GitHub and deployed at Vercel, the function adopted with PHP mailer for sending e-mails does not work, but I kept the settings for future use. The files are located in the [Portfolio/src/](https://github.com/SilasRodrigues19/Portfolio/tree/main/src) folder.
-
-###### Just make some adjustments in the `mail.php` file, informing the `$mail->Username` and `$mail->Password`, change the `action` of the form and change it from `index.html` to `index.php`
 
 ```php
 
@@ -86,8 +78,8 @@
 <details>
   <summary>PHPMailer</summary>
 
-[![Error Mail][product-screenshot5]](https://silasrodrigues.vercel.app)
-[![Success Mail][product-screenshot6]](https://silasrodrigues.vercel.app)
+[![Error Mail][product-screenshot5]](https://charanvardhan.github.io/Portfolio/)
+[![Success Mail][product-screenshot6]](https://charanvardhan.github.io/Portfolio/)
 
 </details>
 
@@ -96,18 +88,16 @@
 <details open>
   <summary>GetForm</summary>
 
-[![Get Form Message][product-screenshot10]](https://silasrodrigues.vercel.app)
+[![Get Form Message][product-screenshot10]](https://charanvardhan.github.io/Portfolio/)
 
 </details>
 
 ### Mobile View
 
-[![About View 404][product-screenshot3]](https://silasrodrigues.vercel.app/Example404)
-[![About View 404][product-screenshot4]](https://silasrodrigues.vercel.app/Example404)
+[![About View 404][product-screenshot3]](https://charanvardhan.github.io/Portfolio/Example404)
+[![About View 404][product-screenshot4]](https://charanvardhan.github.io/Portfolio/Example404)
 
-## Lighthouse Report
 
-[![Lighthouse Report][product-screenshot7]](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fsilasrodrigues.vercel.app%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext)
 
 This project was built to show some of my projects and my freelancing services.
 
@@ -168,35 +158,20 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<!-- LICENSE -->
 
-## License
-
-This work is licensed under a GNU Affero General Public License v3.0 License. See [`LICENSE`](https://github.com/SilasRodrigues19/Portfolio/blob/main/LICENSE) for more information
 
 <!-- CONTACT -->
 
 ## Contact
 
-Silas Rodrigues - [@jinuye1](https://twitter.com/jinuye1) - silasrodrigues.fatec@gmail.com
+Charanvardhan Reddy - charanvardhanreddym@gmail.com
 
-Project Link: [silasrodrigues.vercel.app](https://silasrodrigues.vercel.app)
+Project Link: [https://charanvardhan.github.io/Portfolio/]
 
    <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/SilasRodrigues19/Portfolio.svg?style=for-the-badge
-[contributors-url]: https://github.com/SilasRodrigues19/Portfolio/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/SilasRodrigues19/Portfolio.svg?style=for-the-badge
-[forks-url]: https://github.com/SilasRodrigues19/Portfolio/network/members
-[stars-shield]: https://img.shields.io/github/stars/SilasRodrigues19/Portfolio.svg?style=for-the-badge
-[stars-url]: https://github.com/SilasRodrigues19/Portfolio/stargazers
-[forks-shield]: https://img.shields.io/github/forks/SilasRodrigues19/Portfolio.svg?style=for-the-badge
-[forks-url]: https://github.com/SilasRodrigues19/Portfolio/network/members
-[issues-shield]: https://img.shields.io/github/issues/SilasRodrigues19/Portfolio.svg?style=for-the-badge
-[issues-url]: https://github.com/SilasRodrigues19/Portfolio/issues
-[license-shield]: https://img.shields.io/github/license/SilasRodrigues19/Portfolio.svg?style=for-the-badge
-[license-url]: https://github.com/SilasRodrigues19/Portfolio/blob/master/LICENSE
+
 [product-screenshot]: ./assets/img/preview.png
 [product-screenshot2]: ./assets/img/preview404.png
 [product-screenshot3]: ./assets/img/preview2.gif
