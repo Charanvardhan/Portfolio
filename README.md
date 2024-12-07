@@ -78,8 +78,8 @@
 <details>
   <summary>PHPMailer</summary>
 
-[![Error Mail][product-screenshot5]](https://charanvardhan.github.io/Portfolio/)
-[![Success Mail][product-screenshot6]](https://charanvardhan.github.io/Portfolio/)
+[![Error Mail]](https://charanvardhan.github.io/Portfolio/)
+[![Success Mail]](https://charanvardhan.github.io/Portfolio/)
 
 </details>
 
@@ -94,8 +94,8 @@
 
 ### Mobile View
 
-[![About View 404][product-screenshot3]](https://charanvardhan.github.io/Portfolio/Example404)
-[![About View 404][product-screenshot4]](https://charanvardhan.github.io/Portfolio/Example404)
+[![About View 404]](https://charanvardhan.github.io/Portfolio/Example404)
+[![About View 404]](https://charanvardhan.github.io/Portfolio/Example404)
 
 
 
