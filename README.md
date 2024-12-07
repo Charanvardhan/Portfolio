@@ -47,19 +47,19 @@
 
 ### Desktop View
 
-## [![About View Desktop][product-screenshot9]](https://charanvardhan.github.io/Portfolio/)
+## [![About View Desktop]](https://charanvardhan.github.io/Portfolio/)
 
 ### Desktop Dark View
 
-## [![About View Desktop][product-screenshot]](https://charanvardhan.github.io/Portfolio/)
+## [![About View Desktop]](https://charanvardhan.github.io/Portfolio/)
 
 ### Desktop Light View
 
-## [![About View Desktop][product-screenshot8]](https://charanvardhan.github.io/Portfolio/)
+## [![About View Desktop]](https://charanvardhan.github.io/Portfolio/)
 
 ### 404 View
 
-[![About View 404][product-screenshot2]](https://charanvardhan.github.io/Portfolio/Example404)
+[![About View 404]](https://charanvardhan.github.io/Portfolio/Example404)
 
 
 
