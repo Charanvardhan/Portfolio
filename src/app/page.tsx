@@ -1,27 +1,41 @@
 // src/app/page.tsx
+"use client"
+
+import Link from "next/link"
+
 export default function HomePage() {
   return (
-    <section className="flex flex-col items-center text-center space-y-6 py-20">
-      <h1 className="font-playfair text-5xl text-primary">
-        Hi, I’m Charanvardhan
-      </h1>
-      <p className="text-lg max-w-2xl">
-        I’m a Master’s candidate in Computer Science at UGA, passionate about 
-        Machine Learning, AI, and Cybersecurity. Welcome to my portfolio!
-      </p>
-      <div className="flex space-x-4">
-        <a
-          href="/projects"
-          className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition"
-        >
-          View Projects
-        </a>
-        <a
-          href="/about"
-          className="px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary/10 transition"
-        >
-          About Me
-        </a>
+    <section
+      className="
+        relative flex items-center
+        /* make full-bleed */
+        left-1/2 -translate-x-1/2
+        w-full
+        /* control height */
+        h-[60vh] max-h-[370px]
+        /* background */
+        bg-[url('/images/CoverPhotoLinkedin.png')]
+        bg-cover bg-no-repeat 
+        bg-right 
+        overflow-hidden rounded-3xl
+      "
+    >
+      {/* dark overlay */}
+      {/* <div className="absolute inset-0 bg-black/5" /> */}
+
+      {/* content */}
+      <div className="relative z-10 container mx-auto px-6 lg:px-20">
+        <div className="max-w-md text-left text-white space-y-4">
+          <h3 className="text-lg text-black uppercase tracking-wide">
+          Welcome to my portfolio
+          </h3>
+        <h2 className="text-2xl text-primary text-black">Hey,</h2>
+        <h1 className="font-playfair text-5xl text-secondary text-black">I’m Charanvardhan!</h1>
+          <p className="text-base text-black">
+            Machine Learning Engineer & Data Scientist with 2+ years’ experience
+            in NLP, neural networks, and scalable Python-driven AI systems.
+          </p>
+        </div>
       </div>
     </section>
   )
