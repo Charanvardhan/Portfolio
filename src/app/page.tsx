@@ -81,19 +81,49 @@ export default function HomePage() {
       "
     >
       {/* dark overlay */}
-      {/* <div className="absolute inset-0 bg-black/5" /> */}
+      <div className="absolute inset-0 bg-black/5" />
 
       {/* content */}
       <div className="relative z-10 w-full px-6 sm:px-20">
         <div className="max-w-md text-center space-y-5 text-black font-bold">
           {/* Greeting */}
           <h2 className="text-5xl font-playfair mb-4">
-            👋 Hey, I'm Charanvardhan,
+            👋 Hey, I'm Charanvardhan!
           </h2>
 
           {/* Typed roles */}
           <Typewriter words={roles} />
 
+          {/* Social links */}
+          <div className="flex justify-center gap-8 mt-9">
+            <a href="https://github.com/charanvardhan" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/github.svg"
+                alt="GitHub"
+                width={28}
+                height={32}
+                className="hover:opacity-80"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/charanvardhanreddym/" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="/images/linkedin.svg"
+                alt="LinkedIn"
+                width={32}
+                height={32}
+                className="hover:opacity-80"
+              />
+            </a>
+            <a href="mailto:charanvardhanreddym@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="/images/gmail.svg"
+                alt="Gmail"
+                width={32}
+                height={32}
+                className="hover:opacity-80"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </section>
