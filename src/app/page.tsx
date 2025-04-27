@@ -95,7 +95,7 @@ function Typewriter({
 
     return () => clearTimeout(timeout)
   }, [charIndex, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime])
-
+  // text-[#594e46]
   return (
     <p className="inline text-1xl sm:text-2xl font-playfair font-bold text-[#594e46]">
       {text}
@@ -358,18 +358,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Certifications */}
-          <div>
-            <h3 className="font-playfair text-2xl text-secondary mb-2">
-              Certifications
-            </h3>
-            <ul className="list-disc list-inside text-gray-600 space-y-1">
-              <li>AWS Certified Solutions Architect – Associate</li>
-              <li>AWS Computer Vision</li>
-              <li>Regression Models</li>
-            </ul>
-          </div>
-
           {/* Project Experience & Coding Problems */}
           <div>
             <h3 className="font-playfair text-2xl text-primary mb-4">
@@ -400,6 +388,28 @@ export default function HomePage() {
                   Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence.
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Certifications */}
+          <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
+            Certifications
+          </h2>
+          <div
+            tabIndex="0"
+            className="flex flex-row justify-center items-stretch space-x-10"
+          >
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+              <h3 className="text-2xl sm:text-1xl font-bold mb-2">Industrial IoT on Google Cloud</h3>
+              {/* <p className="text-gray-400 text-sm sm:text-base">Years Experience</p> */}
+            </div>
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+              <h3 className="text-2xl sm:text-1xl font-bold mb-2">AWS Computer Vision: Getting Started with GluonCV</h3>
+              {/* <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p> */}
+            </div>
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+              <h3 className="text-2xl sm:text-1xl font-bold mb-2">Regression Models</h3>
+              {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
             </div>
           </div>
         </div>
