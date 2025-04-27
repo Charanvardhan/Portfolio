@@ -173,6 +173,7 @@ export default function HomePage() {
 
       {/* About */}
       <section id="about" className="py-16 px-6 w-full bg-black">
+      
         <h2 className="font-playfair text-4xl text-primary text-center mb-8 font-bold">
           About Me
         </h2>
@@ -185,242 +186,243 @@ export default function HomePage() {
             about building scalable AI systems with Python and exploring cutting-edge
             LLMs and neural networks.
           </p>
+        </div>
+      </section>
 
+      <section id="skills" className="py-16 px-6 w-full bg-black">
+        {/* ——— Skills ——— */}
+        <h2 className="font-playfair text-4xl text-primary text-center mb-4 font-bold">
+          Skills
+        </h2>
 
-          {/* ——— Skills ——— */}
-          <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
-            Skills
-          </h2>
-
-          <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8">
-            {/* Programming & Scripting */}
-            <div className="p-6 bg-card rounded-lg shadow-md text-center">
-              <h3 className="font-playfair text-xl text-secondary mb-4">
-                Programming & Scripting
-              </h3>
-              <div className="flex flex-wrap justify-center gap-8">
-                <div className="flex flex-col items-center space-y-2">
-                  <FaPython size={32} />
-                  <span className="text-sm text-gray-700">Python</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaCode size={32} />
-                  <span className="text-sm text-gray-700">Java</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <SiR size={32} />
-                  <span className="text-sm text-gray-700">R</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <SiJavascript size={32} />
-                  <span className="text-sm text-gray-700">JavaScript</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaHtml5 size={32} />
-                  <span className="text-sm text-gray-700">HTML5</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Frameworks & Libraries */}
-            <div className="p-6 bg-card rounded-lg shadow-md text-center">
-              <h3 className="font-playfair text-xl text-secondary mb-4">
-                Frameworks & Libraries
-              </h3>
-              <div className="flex flex-wrap justify-center gap-8">
-                <div className="flex flex-col items-center space-y-2">
-                  <SiPandas size={32} />
-                  <span className="text-sm text-gray-700">Pandas</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <SiScikitlearn size={32} />
-                  <span className="text-sm text-gray-700">Scikit-learn</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <SiTensorflow size={32} />
-                  <span className="text-sm text-gray-700">TensorFlow</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaCogs size={32} title="PyTorch" />
-                  <span className="text-sm text-gray-700">PyTorch</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <SiDjango size={32} />
-                  <span className="text-sm text-gray-700">Django</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Tools & Platforms */}
-            <div className="p-6 bg-card rounded-lg shadow-md text-center">
-              <h3 className="font-playfair text-xl text-secondary mb-4">
-                Tools & Platforms
-              </h3>
-              <div className="flex flex-wrap justify-center gap-8">
-                <div className="flex flex-col items-center space-y-2">
-                  <FaGitAlt size={32} />
-                  <span className="text-sm text-gray-700">Git</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaServer size={32} />
-                  <span className="text-sm text-gray-700">Apache Spark</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaAws size={32} />
-                  <span className="text-sm text-gray-700">AWS</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaMicrosoft size={32} />
-                  <span className="text-sm text-gray-700">Azure</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaLinux size={32} />
-                  <span className="text-sm text-gray-700">Linux</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Databases */}
-            <div className="p-6 bg-card rounded-lg shadow-md text-center">
-              <h3 className="font-playfair text-xl text-secondary mb-4">
-                Databases
-              </h3>
-              <div className="flex flex-wrap justify-center gap-8">
-                <div className="flex flex-col items-center space-y-2">
-                  <SiMysql size={32} />
-                  <span className="text-sm text-gray-700">MySQL</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <SiMongodb size={32} />
-                  <span className="text-sm text-gray-700">MongoDB</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <SiRedis size={32} />
-                  <span className="text-sm text-gray-700">Redis</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <SiPostgresql size={32} />
-                  <span className="text-sm text-gray-700">PostgreSQL</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <GiDatabase size={32} />
-                  <span className="text-sm text-gray-700">Vector DBs</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Interests with Icons */}
-          {/* <div>
-            <h3 className="font-playfair text-2xl text-secondary mb-6">
-              Interests
+        <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8">
+          {/* Programming & Scripting */}
+          <div className="p-6 bg-card rounded-lg shadow-md text-center">
+            <h3 className="font-playfair text-xl text-secondary mb-4">
+              Programming & Scripting
             </h3>
             <div className="flex flex-wrap justify-center gap-8">
               <div className="flex flex-col items-center space-y-2">
-                <AiOutlineRobot size={48} className="text-primary" />
-                <span className="text-gray-700 font-bold">LLMs</span>
+                <FaPython size={32} />
+                <span className="text-sm text-gray-700">Python</span>
               </div>
               <div className="flex flex-col items-center space-y-2">
-                <FaBrain size={48} className="text-primary" />
-                <span className="text-gray-700 font-bold">Neural Networks</span>
+                <FaCode size={32} />
+                <span className="text-sm text-gray-700">Java</span>
               </div>
               <div className="flex flex-col items-center space-y-2">
-                <FaPython size={48} className="text-primary" />
-                <span className="text-gray-700 font-bold">
-                  Python
-                </span>
+                <SiR size={32} />
+                <span className="text-sm text-gray-700">R</span>
               </div>
               <div className="flex flex-col items-center space-y-2">
-                <FaChartBar size={48} className="text-primary" />
-                <span className="text-gray-700 font-bold">
-                  Data Viz & EDA
-                </span>
+                <SiJavascript size={32} />
+                <span className="text-sm text-gray-700">JavaScript</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <FaHtml5 size={32} />
+                <span className="text-sm text-gray-700">HTML5</span>
               </div>
             </div>
-          </div> */}
+          </div>
 
-          {/* Stats */}
+          {/* Frameworks & Libraries */}
+          <div className="p-6 bg-card rounded-lg shadow-md text-center">
+            <h3 className="font-playfair text-xl text-secondary mb-4">
+              Frameworks & Libraries
+            </h3>
+            <div className="flex flex-wrap justify-center gap-8">
+              <div className="flex flex-col items-center space-y-2">
+                <SiPandas size={32} />
+                <span className="text-sm text-gray-700">Pandas</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <SiScikitlearn size={32} />
+                <span className="text-sm text-gray-700">Scikit-learn</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <SiTensorflow size={32} />
+                <span className="text-sm text-gray-700">TensorFlow</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <FaCogs size={32} title="PyTorch" />
+                <span className="text-sm text-gray-700">PyTorch</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <SiDjango size={32} />
+                <span className="text-sm text-gray-700">Django</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Tools & Platforms */}
+          <div className="p-6 bg-card rounded-lg shadow-md text-center">
+            <h3 className="font-playfair text-xl text-secondary mb-4">
+              Tools & Platforms
+            </h3>
+            <div className="flex flex-wrap justify-center gap-8">
+              <div className="flex flex-col items-center space-y-2">
+                <FaGitAlt size={32} />
+                <span className="text-sm text-gray-700">Git</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <FaServer size={32} />
+                <span className="text-sm text-gray-700">Apache Spark</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <FaAws size={32} />
+                <span className="text-sm text-gray-700">AWS</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <FaMicrosoft size={32} />
+                <span className="text-sm text-gray-700">Azure</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <FaLinux size={32} />
+                <span className="text-sm text-gray-700">Linux</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Databases */}
+          <div className="p-6 bg-card rounded-lg shadow-md text-center">
+            <h3 className="font-playfair text-xl text-secondary mb-4">
+              Databases
+            </h3>
+            <div className="flex flex-wrap justify-center gap-8">
+              <div className="flex flex-col items-center space-y-2">
+                <SiMysql size={32} />
+                <span className="text-sm text-gray-700">MySQL</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <SiMongodb size={32} />
+                <span className="text-sm text-gray-700">MongoDB</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <SiRedis size={32} />
+                <span className="text-sm text-gray-700">Redis</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <SiPostgresql size={32} />
+                <span className="text-sm text-gray-700">PostgreSQL</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <GiDatabase size={32} />
+                <span className="text-sm text-gray-700">Vector DBs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Interests with Icons */}
+        {/* <div>
+          <h3 className="font-playfair text-2xl text-secondary mb-6">
+            Interests
+          </h3>
+          <div className="flex flex-wrap justify-center gap-8">
+            <div className="flex flex-col items-center space-y-2">
+              <AiOutlineRobot size={48} className="text-primary" />
+              <span className="text-gray-700 font-bold">LLMs</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <FaBrain size={48} className="text-primary" />
+              <span className="text-gray-700 font-bold">Neural Networks</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <FaPython size={48} className="text-primary" />
+              <span className="text-gray-700 font-bold">
+                Python
+              </span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <FaChartBar size={48} className="text-primary" />
+              <span className="text-gray-700 font-bold">
+                Data Viz & EDA
+              </span>
+            </div>
+          </div>
+        </div> */}
+
+        {/* Stats */}
+        <div
+          tabIndex="0"
+          className="flex flex-row justify-center items-stretch space-x-10"
+        >
+          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-2">2+</h3>
+            <p className="text-gray-400 text-sm sm:text-base">Years Experience</p>
+          </div>
+          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-2">10+</h3>
+            <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p>
+          </div>
+          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-2">200+</h3>
+            <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p>
+          </div>
+        </div>
+
+        {/* Project Experience & Coding Problems */}
+        <div>
+          <h3 className="font-playfair text-2xl text-primary mb-4">
+            Project Experience & Coding Problems
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-secondary/10 p-4 rounded-lg">
+              <h4 className="mb-2">🛠️ OCR Billing System</h4>
+              <p className="text-sm text-gray-600">
+                Built an OCR pipeline to extract invoice data with 95% accuracy.
+              </p>
+            </div>
+            <div className="bg-secondary/10 p-4 rounded-lg">
+              <h4 className="mb-2">🔗 Transformer Chatbot</h4>
+              <p className="text-sm text-gray-600">
+                Engineered a real-time intent recognition chatbot using HuggingFace.
+              </p>
+            </div>
+            <div className="bg-secondary/10 p-4 rounded-lg">
+              <h4 className="mb-2">📊 Data Validation Suite</h4>
+              <p className="text-sm text-gray-600">
+                Created automated tests and dashboards for multi-source data pipelines.
+              </p>
+            </div>
+            <div className="bg-secondary/10 p-4 rounded-lg">
+              <h4 className="mb-2">⚡ Optimizer Experiments</h4>
+              <p className="text-sm text-gray-600">
+                Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Certifications */}
+        <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
+          Certifications
+        </h2>
+
+        {/* <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8"> */}
           <div
-            tabIndex="0"
+            // tabIndex="0"
             className="flex flex-row justify-center items-stretch space-x-10"
           >
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-2">2+</h3>
-              <p className="text-gray-400 text-sm sm:text-base">Years Experience</p>
+              <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Certified Solutions Architect – Associate</h3>
+              {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
             </div>
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-2">10+</h3>
-              <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p>
+              <h3 className="text-1xl sm:text-1xl font-bold mb-2">Regression Models</h3>
+              {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
             </div>
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-2">200+</h3>
-              <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p>
+              <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Computer Vision: Getting Started with GluonCV</h3>
+              {/* <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p> */}
+            </div>
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+              <h3 className="text-1xl sm:text-1xl font-bold mb-2">Industrial IoT on Google Cloud</h3>
+              {/* <p className="text-gray-400 text-sm sm:text-base">Years Experience</p> */}
             </div>
           </div>
-
-          {/* Project Experience & Coding Problems */}
-          <div>
-            <h3 className="font-playfair text-2xl text-primary mb-4">
-              Project Experience & Coding Problems
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-secondary/10 p-4 rounded-lg">
-                <h4 className="mb-2">🛠️ OCR Billing System</h4>
-                <p className="text-sm text-gray-600">
-                  Built an OCR pipeline to extract invoice data with 95% accuracy.
-                </p>
-              </div>
-              <div className="bg-secondary/10 p-4 rounded-lg">
-                <h4 className="mb-2">🔗 Transformer Chatbot</h4>
-                <p className="text-sm text-gray-600">
-                  Engineered a real-time intent recognition chatbot using HuggingFace.
-                </p>
-              </div>
-              <div className="bg-secondary/10 p-4 rounded-lg">
-                <h4 className="mb-2">📊 Data Validation Suite</h4>
-                <p className="text-sm text-gray-600">
-                  Created automated tests and dashboards for multi-source data pipelines.
-                </p>
-              </div>
-              <div className="bg-secondary/10 p-4 rounded-lg">
-                <h4 className="mb-2">⚡ Optimizer Experiments</h4>
-                <p className="text-sm text-gray-600">
-                  Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Certifications */}
-          <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
-            Certifications
-          </h2>
-
-          {/* <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8"> */}
-            <div
-              tabIndex="0"
-              className="flex flex-row justify-center items-stretch space-x-10"
-            >
-              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-                <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Certified Solutions Architect – Associate</h3>
-                {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
-              </div>
-              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-                <h3 className="text-1xl sm:text-1xl font-bold mb-2">Regression Models</h3>
-                {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
-              </div>
-              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-                <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Computer Vision: Getting Started with GluonCV</h3>
-                {/* <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p> */}
-              </div>
-              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-                <h3 className="text-1xl sm:text-1xl font-bold mb-2">Industrial IoT on Google Cloud</h3>
-                {/* <p className="text-gray-400 text-sm sm:text-base">Years Experience</p> */}
-              </div>
-              
-            </div>
-          </div>
-        {/* </div> */}
+      
+      {/* </div> */}
       </section>
     </>
   )
