@@ -395,24 +395,32 @@ export default function HomePage() {
           <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
             Certifications
           </h2>
-          <div
-            tabIndex="0"
-            className="flex flex-row justify-center items-stretch space-x-10"
-          >
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-              <h3 className="text-2xl sm:text-1xl font-bold mb-2">Industrial IoT on Google Cloud</h3>
-              {/* <p className="text-gray-400 text-sm sm:text-base">Years Experience</p> */}
-            </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-              <h3 className="text-2xl sm:text-1xl font-bold mb-2">AWS Computer Vision: Getting Started with GluonCV</h3>
-              {/* <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p> */}
-            </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
-              <h3 className="text-2xl sm:text-1xl font-bold mb-2">Regression Models</h3>
-              {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
+
+          {/* <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8"> */}
+            <div
+              tabIndex="0"
+              className="flex flex-row justify-center items-stretch space-x-10"
+            >
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+                <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Certified Solutions Architect – Associate</h3>
+                {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
+              </div>
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+                <h3 className="text-1xl sm:text-1xl font-bold mb-2">Regression Models</h3>
+                {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
+              </div>
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+                <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Computer Vision: Getting Started with GluonCV</h3>
+                {/* <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p> */}
+              </div>
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+                <h3 className="text-1xl sm:text-1xl font-bold mb-2">Industrial IoT on Google Cloud</h3>
+                {/* <p className="text-gray-400 text-sm sm:text-base">Years Experience</p> */}
+              </div>
+              
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </>
   )
