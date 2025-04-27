@@ -197,7 +197,7 @@ export default function HomePage() {
 
         <div className="max-w-5xl py-8 mx-auto grid grid-cols-2 gap-8">
           {/* Programming & Scripting */}
-          <div className="p-6 bg-card rounded-lg shadow-md text-center">
+          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
               Programming & Scripting
             </h3>
@@ -226,7 +226,7 @@ export default function HomePage() {
           </div>
 
           {/* Frameworks & Libraries */}
-          <div className="p-6 bg-card rounded-lg shadow-md text-center">
+          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
               Frameworks & Libraries
             </h3>
@@ -255,7 +255,7 @@ export default function HomePage() {
           </div>
 
           {/* Tools & Platforms */}
-          <div className="p-6 bg-card rounded-lg shadow-md text-center">
+          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
               Tools & Platforms
             </h3>
@@ -284,7 +284,7 @@ export default function HomePage() {
           </div>
 
           {/* Databases */}
-          <div className="p-6 bg-card rounded-lg shadow-md text-center">
+          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
               Databases
             </h3>
