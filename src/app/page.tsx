@@ -197,7 +197,7 @@ export default function HomePage() {
 
         <div className="max-w-5xl py-8 mx-auto grid grid-cols-2 gap-8">
           {/* Programming & Scripting */}
-          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
               Programming & Scripting
             </h3>
@@ -226,7 +226,7 @@ export default function HomePage() {
           </div>
 
           {/* Frameworks & Libraries */}
-          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
               Frameworks & Libraries
             </h3>
@@ -255,7 +255,7 @@ export default function HomePage() {
           </div>
 
           {/* Tools & Platforms */}
-          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
               Tools & Platforms
             </h3>
@@ -284,7 +284,7 @@ export default function HomePage() {
           </div>
 
           {/* Databases */}
-          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+          <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
               Databases
             </h3>
@@ -345,58 +345,56 @@ export default function HomePage() {
         {/* Stats */}
         <div
           tabIndex="0"
-          className="flex flex-row justify-center items-stretch space-x-10"
+          className="flex flex-row justify-center items-stretch space-x-20"
         >
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="text-2xl sm:text-3xl font-bold mb-2">2+</h3>
-            <p className="text-gray-400 text-sm sm:text-base">Years Experience</p>
+            <p className="text-sm sm:text-base">Years Experience</p>
           </div>
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="text-2xl sm:text-3xl font-bold mb-2">10+</h3>
-            <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p>
+            <p className="text-sm sm:text-base">Projects Completed</p>
           </div>
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="text-2xl sm:text-3xl font-bold mb-2">200+</h3>
-            <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p>
+            <p className="text-sm sm:text-base">Problems Solved</p>
           </div>
         </div>
       </section>
         
       <section id="projects" className="py-8 px-6 w-full bg-black">
         {/* Project Experience & Coding Problems */}
-        <div>
-          <h3 className="font-playfair text-2xl text-primary mb-4">
-            Project Experience & Coding Problems
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-secondary/10 p-4 rounded-lg">
-              <h4 className="mb-2">🛠️ OCR Billing System</h4>
-              <p className="text-sm text-gray-600">
-                Built an OCR pipeline to extract invoice data with 95% accuracy.
-              </p>
-            </div>
-            <div className="bg-secondary/10 p-4 rounded-lg">
-              <h4 className="mb-2">🔗 Transformer Chatbot</h4>
-              <p className="text-sm text-gray-600">
-                Engineered a real-time intent recognition chatbot using HuggingFace.
-              </p>
-            </div>
-            <div className="bg-secondary/10 p-4 rounded-lg">
-              <h4 className="mb-2">📊 Data Validation Suite</h4>
-              <p className="text-sm text-gray-600">
-                Created automated tests and dashboards for multi-source data pipelines.
-              </p>
-            </div>
-            <div className="bg-secondary/10 p-4 rounded-lg">
-              <h4 className="mb-2">⚡ Optimizer Experiments</h4>
-              <p className="text-sm text-gray-600">
-                Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence.
-              </p>
-            </div>
+        <h3 className="font-playfair text-4xl text-primary text-center mb-4 font-bold">
+          Experience & Education
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-secondary/10 p-4 rounded-lg">
+            <h4 className="mb-2">🛠️ OCR Billing System</h4>
+            <p className="text-sm text-gray-600">
+              Built an OCR pipeline to extract invoice data with 95% accuracy.
+            </p>
+          </div>
+          <div className="bg-secondary/10 p-4 rounded-lg">
+            <h4 className="mb-2">🔗 Transformer Chatbot</h4>
+            <p className="text-sm text-gray-600">
+              Engineered a real-time intent recognition chatbot using HuggingFace.
+            </p>
+          </div>
+          <div className="bg-secondary/10 p-4 rounded-lg">
+            <h4 className="mb-2">📊 Data Validation Suite</h4>
+            <p className="text-sm text-gray-600">
+              Created automated tests and dashboards for multi-source data pipelines.
+            </p>
+          </div>
+          <div className="bg-secondary/10 p-4 rounded-lg">
+            <h4 className="mb-2">⚡ Optimizer Experiments</h4>
+            <p className="text-sm text-gray-600">
+              Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence.
+            </p>
           </div>
         </div>
-
       </section>
+
       <section id="certifications" className="py-8 px-6 w-full bg-black">
         {/* Certifications */}
         <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
@@ -405,22 +403,22 @@ export default function HomePage() {
 
         {/* <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8"> */}
           <div
-            // tabIndex="0"
+            tabIndex="0"
             className="flex flex-row justify-center items-stretch space-x-10"
           >
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
               <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Certified Solutions Architect – Associate</h3>
               {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
             </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
               <h3 className="text-1xl sm:text-1xl font-bold mb-2">Regression Models</h3>
               {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
             </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
               <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Computer Vision: Getting Started with GluonCV</h3>
               {/* <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p> */}
             </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center">
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
               <h3 className="text-1xl sm:text-1xl font-bold mb-2">Industrial IoT on Google Cloud</h3>
               {/* <p className="text-gray-400 text-sm sm:text-base">Years Experience</p> */}
             </div>
