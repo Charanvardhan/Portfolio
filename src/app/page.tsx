@@ -406,19 +406,19 @@ export default function HomePage() {
             tabIndex="0"
             className="flex flex-row justify-center items-stretch space-x-10"
           >
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-              <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Certified Solutions Architect – Associate</h3>
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center">
+              <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Certified Solutions Architect Associate</h3>
               {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
             </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center">
               <h3 className="text-1xl sm:text-1xl font-bold mb-2">Regression Models</h3>
               {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
             </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-              <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Computer Vision: Getting Started with GluonCV</h3>
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center">
+              <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Computer Vision: with GluonCV</h3>
               {/* <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p> */}
             </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center">
               <h3 className="text-1xl sm:text-1xl font-bold mb-2">Industrial IoT on Google Cloud</h3>
               {/* <p className="text-gray-400 text-sm sm:text-base">Years Experience</p> */}
             </div>
