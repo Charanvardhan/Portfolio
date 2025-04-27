@@ -172,7 +172,7 @@ export default function HomePage() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-16 px-6 w-full bg-black">
+      <section id="about" className="py-10 px-6 w-full bg-black">
       
         <h2 className="font-playfair text-4xl text-primary text-center mb-8 font-bold">
           About Me
@@ -189,13 +189,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="skills" className="py-16 px-6 w-full bg-black">
-        {/* ——— Skills ——— */}
-        <h2 className="font-playfair text-4xl text-primary text-center mb-4 font-bold">
+      {/* Skills */}
+      <section id="skills" className="py-8 px-6 w-full bg-black">
+        <h2 className="font-playfair text-4xl text-primary text-center mb-2 font-bold">
           Skills
         </h2>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8">
+        <div className="max-w-5xl py-8 mx-auto grid grid-cols-2 gap-8">
           {/* Programming & Scripting */}
           <div className="p-6 bg-card rounded-lg shadow-md text-center">
             <h3 className="font-playfair text-xl text-secondary mb-4">
@@ -360,7 +360,9 @@ export default function HomePage() {
             <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p>
           </div>
         </div>
-
+      </section>
+        
+      <section id="projects" className="py-8 px-6 w-full bg-black">
         {/* Project Experience & Coding Problems */}
         <div>
           <h3 className="font-playfair text-2xl text-primary mb-4">
@@ -394,6 +396,8 @@ export default function HomePage() {
           </div>
         </div>
 
+      </section>
+      <section id="certifications" className="py-8 px-6 w-full bg-black">
         {/* Certifications */}
         <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
           Certifications
