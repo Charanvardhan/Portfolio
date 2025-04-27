@@ -40,6 +40,7 @@ import {
   SiMongodb,
   SiRedis,
   SiPostgresql,
+  SiR,
 } from "react-icons/si"
 
 
@@ -207,16 +208,16 @@ export default function HomePage() {
                   <span className="text-sm text-gray-700">Java</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
+                  <SiR size={32} />
+                  <span className="text-sm text-gray-700">R</span>
+                </div>
+                <div className="flex flex-col items-center space-y-2">
                   <SiJavascript size={32} />
                   <span className="text-sm text-gray-700">JavaScript</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <FaHtml5 size={32} />
                   <span className="text-sm text-gray-700">HTML5</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <FaCode size={32} />
-                  <span className="text-sm text-gray-700">SQL/Bash</span>
                 </div>
               </div>
             </div>
