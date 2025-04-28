@@ -104,8 +104,10 @@ function Typewriter({
   )
 }
 
+  
 
 export default function HomePage() {
+  const [activeTab, setActiveTab] = useState<"experience" | "education">("experience")
   return (
     <>
       <section
@@ -362,36 +364,86 @@ export default function HomePage() {
         </div>
       </section>
         
-      <section id="projects" className="py-8 px-6 w-full bg-black">
-        {/* Project Experience & Coding Problems */}
-        <h3 className="font-playfair text-4xl text-primary text-center mb-4 font-bold">
+      <section id="experience-education" className="py-8 px-6 w-full bg-black">
+      {/* Section Title */}
+        <h3 className="font-playfair text-4xl text-primary text-center mb-8 font-bold">
           Experience & Education
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="bg-secondary/10 p-4 rounded-lg">
-            <h4 className="mb-2">🛠️ OCR Billing System</h4>
-            <p className="text-sm text-gray-600">
-              Built an OCR pipeline to extract invoice data with 95% accuracy.
-            </p>
-          </div>
-          <div className="bg-secondary/10 p-4 rounded-lg">
-            <h4 className="mb-2">🔗 Transformer Chatbot</h4>
-            <p className="text-sm text-gray-600">
-              Engineered a real-time intent recognition chatbot using HuggingFace.
-            </p>
-          </div>
-          <div className="bg-secondary/10 p-4 rounded-lg">
-            <h4 className="mb-2">📊 Data Validation Suite</h4>
-            <p className="text-sm text-gray-600">
-              Created automated tests and dashboards for multi-source data pipelines.
-            </p>
-          </div>
-          <div className="bg-secondary/10 p-4 rounded-lg">
-            <h4 className="mb-2">⚡ Optimizer Experiments</h4>
-            <p className="text-sm text-gray-600">
-              Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence.
-            </p>
-          </div>
+
+        {/* Toggle Buttons */}
+        <div className="flex justify-center mb-8 gap-4">
+          <button
+            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300
+              ${
+                activeTab === "experience"
+                  ? "bg-green-900 text-green-400 border-green-700"
+                  : "bg-transparent text-green-400 border-green-700"
+              }`}
+            onClick={() => setActiveTab("experience")}
+          >
+            Experience
+          </button>
+
+          <button
+            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300
+              ${
+                activeTab === "education"
+                  ? "bg-green-900 text-green-400 border-green-700"
+                  : "bg-transparent text-green-400 border-green-700"
+              }`}
+            onClick={() => setActiveTab("education")}
+          >
+            Education
+          </button>
+        </div>
+
+        {/* Grid Content */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {activeTab === "experience" ? (
+            <>
+              {/* Experience Cards */}
+              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+                <h4 className="mb-2">🛠️ OCR Billing System</h4>
+                <p className="text-sm text-gray-300">
+                  Built an OCR pipeline to extract invoice data with 95% accuracy.
+                </p>
+              </div>
+              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+                <h4 className="mb-2">🔗 Transformer Chatbot</h4>
+                <p className="text-sm text-gray-300">
+                  Engineered a real-time intent recognition chatbot using HuggingFace.
+                </p>
+              </div>
+              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+                <h4 className="mb-2">📊 Data Validation Suite</h4>
+                <p className="text-sm text-gray-300">
+                  Created automated tests and dashboards for multi-source data pipelines.
+                </p>
+              </div>
+              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+                <h4 className="mb-2">⚡ Optimizer Experiments</h4>
+                <p className="text-sm text-gray-300">
+                  Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence.
+                </p>
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Education Cards */}
+              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+                <h4 className="mb-2">🎓 University of Georgia</h4>
+                <p className="text-sm text-gray-300">
+                  MS in Computer and Information Science (2023–2025).
+                </p>
+              </div>
+              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
+                <h4 className="mb-2">🎓 JNTU Hyderabad</h4>
+                <p className="text-sm text-gray-300">
+                  B.Tech in Computer Science and Engineering (2017–2021).
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </section>
 
