@@ -110,6 +110,25 @@ function Typewriter({
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<"experience" | "research" | "education">("experience")
   const [submitted, setSubmitted] = useState(false)
+  
+
+  useEffect(() => {
+    const handleClick = (e: any) => {
+      if (e.target && e.target.dataset.tab) {
+        const tab = e.target.dataset.tab;
+        if (tab === "experience" || tab === "research" || tab === "education") {
+          setActiveTab(tab);
+        }
+      }
+    };
+  
+    document.addEventListener("click", handleClick);
+  
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+    
 
   const experienceData = [
     {
@@ -169,7 +188,7 @@ export default function HomePage() {
 
   return (
     <>
-      <section
+      <section id="home"
         className="
           relative flex items-center
           /* make full-bleed */
@@ -424,12 +443,11 @@ export default function HomePage() {
       </section>
         
       <section id="experience-education" className="py-8 px-6 w-full bg-black">
-        {/* Section Title */}
         <h3 className="font-playfair text-4xl text-primary text-center mb-8 font-bold">
           Experience & Education
         </h3>
 
-        {/* Toggle Buttons */}
+        {/* Buttons */}
         <div className="flex justify-center mb-8 gap-4">
           <button
             className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300 ${
@@ -447,7 +465,8 @@ export default function HomePage() {
               activeTab === "research"
                 ? "bg-green-900 text-green-400 border-green-700"
                 : "bg-transparent text-green-400 border-green-700"
-            }`}onClick={() => setActiveTab("research")}
+            }`}
+            onClick={() => setActiveTab("research")}
           >
             Research
           </button>
@@ -463,6 +482,11 @@ export default function HomePage() {
             Education
           </button>
         </div>
+
+        {/* Invisible scroll anchors */}
+        <div id="experience" className="pt-24 -mt-24"></div>
+        <div id="research" className="pt-24 -mt-24"></div>
+        <div id="education" className="pt-24 -mt-24"></div>
 
         {/* Grid Content */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
