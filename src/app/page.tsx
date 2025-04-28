@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -107,7 +108,26 @@ function Typewriter({
   
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState<"experience" | "education">("experience")
+  const [activeTab, setActiveTab] = useState<"experience" | "research" | "education">("experience")
+
+  const experienceData = [
+    { title: "🛠️ OCR Billing System", description: "Built an OCR pipeline to extract invoice data with 95% accuracy." },
+    { title: "🔗 Transformer Chatbot", description: "Engineered a real-time intent recognition chatbot using HuggingFace with real-time intent prediction." },
+    { title: "📊 Data Validation Suite", description: "Created automated tests and dashboards for multi-source data pipelines." },
+    { title: "⚡ Optimizer Experiments", description: "Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence." }
+  ]
+
+  const researchData = [
+    { title: "📚 Research Project 1", description: "Investigated optimization strategies for early-stage LLM training." },
+    { title: "🧪 Research Paper 2", description: "Explored privacy-preserving techniques for neural networks." }
+  ]
+
+  const educationData = [
+    { title: "🎓 University of Georgia", description: "MS in Computer Science (2023–2025)." },
+    { title: "🎓 VIT Hyderabad", description: "M.Tech Integrated Course - Software Engineering (2017–2022)." }
+  ]
+
+
   return (
     <>
       <section
@@ -365,7 +385,7 @@ export default function HomePage() {
       </section>
         
       <section id="experience-education" className="py-8 px-6 w-full bg-black">
-      {/* Section Title */}
+        {/* Section Title */}
         <h3 className="font-playfair text-4xl text-primary text-center mb-8 font-bold">
           Experience & Education
         </h3>
@@ -373,24 +393,29 @@ export default function HomePage() {
         {/* Toggle Buttons */}
         <div className="flex justify-center mb-8 gap-4">
           <button
-            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300
-              ${
-                activeTab === "experience"
-                  ? "bg-green-900 text-green-400 border-green-700"
-                  : "bg-transparent text-green-400 border-green-700"
-              }`}
+            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300 ${
+              activeTab === "experience"
+                ? "bg-green-900 text-green-400 border-green-700"
+                : "bg-transparent text-green-400 border-green-700"
+            }`}
             onClick={() => setActiveTab("experience")}
           >
             Experience
           </button>
 
           <button
-            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300
-              ${
-                activeTab === "education"
-                  ? "bg-green-900 text-green-400 border-green-700"
-                  : "bg-transparent text-green-400 border-green-700"
-              }`}
+            className="px-6 py-2 rounded-full font-semibold border border-green-700 text-green-400 bg-transparent transition-all duration-300 hover:bg-green-900 hover:text-green-400"
+            onClick={() => setActiveTab("research")}
+          >
+            Research
+          </button>
+
+          <button
+            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300 ${
+              activeTab === "education"
+                ? "bg-green-900 text-green-400 border-green-700"
+                : "bg-transparent text-green-400 border-green-700"
+            }`}
             onClick={() => setActiveTab("education")}
           >
             Education
@@ -398,52 +423,28 @@ export default function HomePage() {
         </div>
 
         {/* Grid Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {activeTab === "experience" ? (
-            <>
-              {/* Experience Cards */}
-              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-                <h4 className="mb-2">🛠️ OCR Billing System</h4>
-                <p className="text-sm text-gray-300">
-                  Built an OCR pipeline to extract invoice data with 95% accuracy.
-                </p>
-              </div>
-              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-                <h4 className="mb-2">🔗 Transformer Chatbot</h4>
-                <p className="text-sm text-gray-300">
-                  Engineered a real-time intent recognition chatbot using HuggingFace.
-                </p>
-              </div>
-              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-                <h4 className="mb-2">📊 Data Validation Suite</h4>
-                <p className="text-sm text-gray-300">
-                  Created automated tests and dashboards for multi-source data pipelines.
-                </p>
-              </div>
-              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-                <h4 className="mb-2">⚡ Optimizer Experiments</h4>
-                <p className="text-sm text-gray-300">
-                  Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence.
-                </p>
-              </div>
-            </>
-          ) : (
-            <>
-              {/* Education Cards */}
-              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-                <h4 className="mb-2">🎓 University of Georgia</h4>
-                <p className="text-sm text-gray-300">
-                  MS in Computer and Information Science (2023–2025).
-                </p>
-              </div>
-              <div className="bg-secondary/10 p-4 rounded-lg transition-transform transform hover:-translate-y-2 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-                <h4 className="mb-2">🎓 JNTU Hyderabad</h4>
-                <p className="text-sm text-gray-300">
-                  B.Tech in Computer Science and Engineering (2017–2021).
-                </p>
-              </div>
-            </>
-          )}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
+          <AnimatePresence mode="wait">
+            {(activeTab === "experience" ? experienceData :
+              activeTab === "research" ? researchData :
+              educationData).map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="rounded-lg bg-green-900/20 p-6 w-full h-60 flex flex-col justify-center items-center overflow-hidden"
+              >
+                <h4 className="mb-4 font-bold text-lg text-green-400 text-center">
+                  {item.title}
+                </h4>
+                <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-green-700 scrollbar-track-transparent text-gray-300 text-sm text-center px-2">
+                  {item.description}
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </section>
 
