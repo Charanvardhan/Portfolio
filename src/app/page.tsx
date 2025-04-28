@@ -109,6 +109,7 @@ function Typewriter({
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<"experience" | "research" | "education">("experience")
+  const [submitted, setSubmitted] = useState(false)
 
   const experienceData = [
     { title: "🛠️ OCR Billing System", description: "Built an OCR pipeline to extract invoice data with 95% accuracy." },
@@ -404,8 +405,11 @@ export default function HomePage() {
           </button>
 
           <button
-            className="px-6 py-2 rounded-full font-semibold border border-green-700 text-green-400 bg-transparent transition-all duration-300 hover:bg-green-900 hover:text-green-400"
-            onClick={() => setActiveTab("research")}
+            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300 ${
+              activeTab === "research"
+                ? "bg-green-900 text-green-400 border-green-700"
+                : "bg-transparent text-green-400 border-green-700"
+            }`}onClick={() => setActiveTab("research")}
           >
             Research
           </button>
@@ -486,6 +490,73 @@ export default function HomePage() {
       
       {/* </div> */}
       </section>
+
+      <section id="contact" className="py-12 px-6 w-full bg-black">
+        <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
+          Contact Me
+        </h2>
+
+        <div className="max-w-2xl mx-auto text-center space-y-8">
+          {submitted ? (
+            // 🎉 Success Message
+            <div className="text-green-400 text-xl font-semibold">
+              🎉 Thank you for contacting me! I will get back to you soon.
+            </div>
+          ) : (
+            // 💬 Contact Form
+            <form
+              action="https://formspree.io/f/yourformid" // Replace with your actual Formspree form link
+              method="POST"
+              onSubmit={() => setSubmitted(true)}
+              className="space-y-6"
+            >
+              {/* Name */}
+              <div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  className="w-full p-3 rounded-md bg-black border border-green-700 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-green-400 transition-all duration-300 focus:ring-2 focus:ring-green-700"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  className="w-full p-3 rounded-md bg-black border border-green-700 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-green-400 transition-all duration-300 focus:ring-2 focus:ring-green-700"
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <textarea
+                  name="message"
+                  rows={5}
+                  placeholder="Your Message"
+                  required
+                  className="w-full p-3 rounded-md bg-black border border-green-700 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-green-400 transition-all duration-300 focus:ring-2 focus:ring-green-700"
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <div>
+                <button
+                  type="submit"
+                  className="px-8 py-3 rounded-full border border-green-700 text-green-400 font-semibold hover:bg-green-900 hover:text-green-400 transition-all duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+      </section>
+
     </>
   )
 }
