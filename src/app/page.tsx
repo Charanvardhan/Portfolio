@@ -537,7 +537,7 @@ export default function HomePage() {
       {/* </div> */}
       </section>
 
-      <section id="contact" className="py-12 px-6 w-full bg-black">
+      {/* <section id="contact" className="py-12 px-6 w-full bg-black">
         <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
           Contact Me
         </h2>
@@ -556,7 +556,6 @@ export default function HomePage() {
               onSubmit={() => setSubmitted(true)}
               className="space-y-6"
             >
-              {/* Name */}
               <div>
                 <input
                   type="text"
@@ -567,7 +566,6 @@ export default function HomePage() {
                 />
               </div>
 
-              {/* Email */}
               <div>
                 <input
                   type="email"
@@ -578,7 +576,6 @@ export default function HomePage() {
                 />
               </div>
 
-              {/* Message */}
               <div>
                 <textarea
                   name="message"
@@ -589,7 +586,6 @@ export default function HomePage() {
                 ></textarea>
               </div>
 
-              {/* Submit Button */}
               <div>
                 <button
                   type="submit"
@@ -601,7 +597,7 @@ export default function HomePage() {
             </form>
           )}
         </div>
-      </section>
+      </section> */}
 
     </>
   )
