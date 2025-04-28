@@ -112,21 +112,59 @@ export default function HomePage() {
   const [submitted, setSubmitted] = useState(false)
 
   const experienceData = [
-    { title: "🛠️ OCR Billing System", description: "Built an OCR pipeline to extract invoice data with 95% accuracy." },
-    { title: "🔗 Transformer Chatbot", description: "Engineered a real-time intent recognition chatbot using HuggingFace with real-time intent prediction." },
-    { title: "📊 Data Validation Suite", description: "Created automated tests and dashboards for multi-source data pipelines." },
-    { title: "⚡ Optimizer Experiments", description: "Fine-tuned L-BFGS & Newton optimizers for faster CNN convergence." }
-  ]
-
+    {
+      title: "Machine Learning Engineer – Kore.ai, Inc.",
+      description: [
+        "Built OCR pipelines for automated bill processing, ensuring accuracy and validation with AI-driven verification.",
+        "Engineered transformer-based dialogue flows for real-time intent recognition and NLP optimization.",
+        "Developed custom domain-specific NER, NLP, and NLU models for entity extraction and semantic analysis.",
+        "Migrated ontology-based knowledge graphs to scalable embedding-based retrieval systems using BERT.",
+        "Deployed NLP models via ONNX quantization and pruning for efficient edge device inference."
+      ]
+    },
+    {
+      title: "Data Scientist Intern – Nokia Solutions & Networks",
+      description: [
+        "Designed automated data validation workflows with quantitative tests and EDA to maintain multi-source pipeline integrity.",
+        "Performed regression, classification, and clustering analyses to derive business insights.",
+        "Applied PCA and Lasso Regression for feature selection and model efficiency improvement.",
+        "Visualized key performance indicators using Matplotlib and Seaborn for executive and technical reporting."
+      ]
+    },
+    {
+      title: "Graduate Research Assistant – University of Georgia",
+      description: [
+        "Designed and fine-tuned second-order optimizers inspired by L-BFGS and Newton’s methods to accelerate CNN training on CIFAR-10/100 datasets.",
+        "Enhanced ResNet generalization using data augmentation, dropout, and learning rate scheduling techniques.",
+        "Developed distributed deep learning workflows with mixed precision and model parallelism in PyTorch for large datasets."
+      ]
+    },
+    {
+      title: "Graduate Teaching Assistant – University of Georgia",
+      description: [
+        "Instructed R programming via Posit Cloud, guiding students through data wrangling, statistical modeling, and reproducible workflows with real-world data.",
+        "Created instructional materials and held one-on-one sessions to simplify complex analytical concepts.",
+        "Assessed assignments focusing on programming accuracy, numerical validity, and visualization clarity using ggplot2."
+      ]
+    }
+  ];
+  
+  
   const researchData = [
-    { title: "📚 Research Project 1", description: "Investigated optimization strategies for early-stage LLM training." },
-    { title: "🧪 Research Paper 2", description: "Explored privacy-preserving techniques for neural networks." }
-  ]
+    { 
+      title: "Early-Stage Neural Network Optimization", 
+      description: "Designed and fine-tuned second-order optimizers, inspired by L-BFGS and Newton’s methods, to accelerate CNN training on CIFAR-10/100 datasets, achieving faster convergence and enhanced generalization across high-dimensional spaces." 
+    },
+    { 
+      title: "Training Dynamics Under Differential Privacy", 
+      description: "Systematically analyzed early training dynamics of differentially private neural networks, studying how learning rate, depth, and width impact optimization behavior. Using Hessian eigenvalues to track sharpness, identified distinct regimes — early transient, intermediate saturation, progressive sharpening, and edge of stability — revealing unique sharpness reduction phases under differential privacy compared to non-private models." 
+    }
+  ];
 
   const educationData = [
-    { title: "🎓 University of Georgia", description: "MS in Computer Science (2023–2025)." },
-    { title: "🎓 VIT Hyderabad", description: "M.Tech Integrated Course - Software Engineering (2017–2022)." }
-  ]
+    { title: "University of Georgia (Aug 2023 – Present)", description: "Master’s in Computer Science, GPA: 3.84/4.0." },
+    { title: "Vellore Institute of Technology (July 2017 – May 2022)", description: "Integrated Master’s in Software Engineering, GPA: 3.3/4.0." }
+  ];
 
 
   return (
@@ -428,7 +466,7 @@ export default function HomePage() {
 
         {/* Grid Content */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {(activeTab === "experience" ? experienceData :
               activeTab === "research" ? researchData :
               educationData).map((item, index) => (
@@ -443,8 +481,16 @@ export default function HomePage() {
                 <h4 className="mb-4 font-bold text-lg text-green-400 text-center">
                   {item.title}
                 </h4>
-                <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-green-700 scrollbar-track-transparent text-gray-300 text-sm text-center px-2">
-                  {item.description}
+                <div className="overflow-y-auto max-h-40 scrollbar-thin scrollbar-thumb-green-700 scrollbar-track-transparent text-gray-300 text-sm text-left px-2 space-y-2">
+                  {Array.isArray(item.description) ? (
+                    <ul className="list-disc list-inside">
+                      {item.description.map((point, idx) => (
+                        <li key={idx}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{item.description}</p>
+                  )}
                 </div>
               </motion.div>
             ))}
