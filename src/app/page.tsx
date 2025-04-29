@@ -58,6 +58,11 @@ function Typewriter({
   typingSpeed = 100,
   deletingSpeed = 100,
   pauseTime = 1500,
+}: {
+  words: string[];
+  typingSpeed?: number;
+  deletingSpeed?: number;
+  pauseTime?: number;
 }) {
   const [text, setText] = useState("")
   const [wordIndex, setWordIndex] = useState(0)
