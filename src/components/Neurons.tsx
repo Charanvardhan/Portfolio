@@ -1,16 +1,17 @@
-// src/components/Neurons.tsx
-'use client'
+'use client';
 
-import { useCallback } from 'react'
-import Particles from '@tsparticles/react'
-import { loadFull } from 'tsparticles'
-import type { Engine } from 'tsparticles-engine'
+import { useCallback } from 'react';
+import Particles from '@tsparticles/react';
+import { loadFull } from 'tsparticles';
+import { Engine } from '@tsparticles/engine';
+// import type { Engine } from 'tsparticles-engine';
+
 
 export default function Neurons() {
   const particlesInit = useCallback(async (engine: Engine) => {
     // loadFull registers all the features from the tsparticles bundle
-    await loadFull(engine)
-  }, [])
+    await loadFull(engine);
+  }, []);
 
   const particlesOptions = {
     background: { color: { value: 'transparent' } },
@@ -19,13 +20,13 @@ export default function Neurons() {
     particles: {
       color: { value: '#ffffff' },
       links: { enable: true, distance: 120, color: '#999999', opacity: 0.4, width: 1 },
-      move: { enable: true, speed: 0.6, outModes: 'bounce' },
+      move: { enable: true, speed: 0.6, outMode: 'bounce' }, // Simplified
       number: { value: 50, density: { enable: true, area: 800 } },
       opacity: { value: 0.5 },
       size: { value: 2, random: { enable: true, minimumValue: 1 } },
     },
     detectRetina: true,
-  }
+  };
 
-  return <Particles id="neurons" init={particlesInit} options={particlesOptions} />
+  return <Particles id="neurons" init={particlesInit} options={particlesOptions} />;
 }
