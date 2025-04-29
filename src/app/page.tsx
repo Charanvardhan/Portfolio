@@ -72,7 +72,7 @@ function Typewriter({
   useEffect(() => {
     const currentWord = words[wordIndex]
     const chars = Array.from(currentWord)      // <-- split into correct codepoints
-    let timeout
+    let timeout: NodeJS.Timeout | null = null; // Explicitly type and initialize
 
     if (!isDeleting && charIndex < chars.length) {
       // typing forward
@@ -98,7 +98,11 @@ function Typewriter({
       }
     }
 
-    return () => clearTimeout(timeout)
+    return () => {
+      if (timeout !== null) {
+        clearTimeout(timeout);
+      }
+    }
   }, [charIndex, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime])
   // text-[#594e46]
   return (
@@ -112,22 +116,21 @@ function Typewriter({
   
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState<"experience" | "research" | "education">("experience")
+  const [activeTab, setActiveTab] = useState<"experience" | "research" | "education">("experience");
   // const [submitted, setSubmitted] = useState(false)
-  
 
   useEffect(() => {
-    const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+    const handleClick = (e: MouseEvent) => {
       if (e.target && (e.target as HTMLElement).dataset.tab) {
-        const tab = (e.target as HTMLElement).dataset.tab;
-        if (tab === "experience" || tab === "research" || tab === "education") {
+        const tab = (e.target as HTMLElement).dataset.tab as "experience" | "research" | "education" | undefined;
+        if (tab && (tab === "experience" || tab === "research" || tab === "education")) {
           setActiveTab(tab);
         }
       }
     };
-  
+
     document.addEventListener("click", handleClick);
-  
+
     return () => {
       document.removeEventListener("click", handleClick);
     };
@@ -428,7 +431,7 @@ export default function HomePage() {
 
         {/* Stats */}
         <div
-          tabIndex="0"
+          // tabIndex="0"
           className="flex flex-row justify-center items-stretch space-x-20"
         >
           <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
@@ -534,7 +537,7 @@ export default function HomePage() {
 
         {/* <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8"> */}
           <div
-            tabIndex="0"
+            // tabIndex="0"
             className="flex flex-row justify-center items-stretch space-x-10"
           >
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center group">
