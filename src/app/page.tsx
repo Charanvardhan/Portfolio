@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import Link from "next/link"
 import Image from "next/image"
 
 // Font Awesome
@@ -14,15 +13,15 @@ import {
   FaGitAlt,
   FaAws,
   FaLinux,
-  FaCloud,
+  // FaCloud,
   FaServer,
-  FaBrain,
-  FaChartBar,
+  // FaBrain,
+  // FaChartBar,
   FaMicrosoft
 } from "react-icons/fa"
 
 // Ant Design
-import { AiOutlineRobot } from "react-icons/ai"
+// import { AiOutlineRobot } from "react-icons/ai"
 
 // Game Icons
 import { GiDatabase } from "react-icons/gi"
@@ -109,13 +108,13 @@ function Typewriter({
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<"experience" | "research" | "education">("experience")
-  const [submitted, setSubmitted] = useState(false)
+  // const [submitted, setSubmitted] = useState(false)
   
 
   useEffect(() => {
-    const handleClick = (e: any) => {
-      if (e.target && e.target.dataset.tab) {
-        const tab = e.target.dataset.tab;
+    const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+      if (e.target && (e.target as HTMLElement).dataset.tab) {
+        const tab = (e.target as HTMLElement).dataset.tab;
         if (tab === "experience" || tab === "research" || tab === "education") {
           setActiveTab(tab);
         }
@@ -220,7 +219,7 @@ export default function HomePage() {
             {/* Social links */}
             <div className="flex justify-center gap-8 mt-9">
               <a href="https://github.com/charanvardhan" target="_blank" rel="noopener noreferrer">
-                <img
+                <Image
                   src="/images/github.svg"
                   alt="GitHub"
                   width={28}
@@ -229,7 +228,7 @@ export default function HomePage() {
                 />
               </a>
               <a href="https://www.linkedin.com/in/charanvardhanreddym/" target="_blank" rel="noopener noreferrer">
-                <img 
+                <Image 
                   src="/images/linkedin.svg"
                   alt="LinkedIn"
                   width={32}
@@ -238,7 +237,7 @@ export default function HomePage() {
                 />
               </a>
               <a href="mailto:charanvardhanreddym@gmail.com" target="_blank" rel="noopener noreferrer">
-                <img 
+                <Image 
                   src="/images/gmail.svg"
                   alt="Gmail"
                   width={32}
