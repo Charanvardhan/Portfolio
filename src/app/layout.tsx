@@ -1,19 +1,13 @@
 // src/app/layout.tsx
 import './globals.css'
 
-export const metadata = {
-  title: 'Charanvardhan Mannuru | Portfolio',
-  description: 'Master’s candidate in CS at UGA — ML, AI & Cybersecurity',
-}
+export const metadata = { /* … */ }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="font-montserrat antialiased text-gray-200 bg-black scroll-smooth">
+      <body className="font-montserrat antialiased bg-black text-gray-200 scroll-smooth">
+
         {/* Header */}
         <header className="bg-[#c0beb6] shadow-md fixed top-0 w-full z-50">
           <nav className="container mx-auto flex flex-wrap space-x-6 p-4 text-black font-bold">
