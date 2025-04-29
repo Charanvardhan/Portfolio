@@ -27,7 +27,7 @@ import {
 import { GiDatabase } from "react-icons/gi"
 
 // Devicons (for VS Code)
-import { DiVisualstudio } from "react-icons/di"
+// import { DiVisualstudio } from "react-icons/di"
 
 // Simple Icons
 import {
