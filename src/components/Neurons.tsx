@@ -1,32 +1,62 @@
+// src/components/Neurons.tsx
 'use client';
 
-import { useCallback } from 'react';
-import Particles from '@tsparticles/react';
+import React, { useEffect, useState } from 'react';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadFull } from 'tsparticles';
-import { Engine } from '@tsparticles/engine';
-// import type { Engine } from 'tsparticles-engine';
-
+import type { ISourceOptions } from '@tsparticles/engine';
 
 export default function Neurons() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    // loadFull registers all the features from the tsparticles bundle
-    await loadFull(engine);
+  // track when the engine is ready
+  const [engineReady, setEngineReady] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      // load the full tsparticles bundle (all plugins)
+      await loadFull(engine);
+    }).then(() => {
+      setEngineReady(true);
+    });
   }, []);
 
-  const particlesOptions = {
+  const particlesOptions: ISourceOptions = {
     background: { color: { value: 'transparent' } },
     fpsLimit: 60,
-    interactivity: { events: { onHover: { enable: false }, onClick: { enable: false } } },
+    interactivity: {
+      events: { onHover: { enable: false }, onClick: { enable: false } },
+    },
     particles: {
-      color: { value: '#ffffff' },
-      links: { enable: true, distance: 120, color: '#999999', opacity: 0.4, width: 1 },
-      move: { enable: true, speed: 0.6, outMode: 'bounce' }, // Simplified
-      number: { value: 50, density: { enable: true, area: 800 } },
+      color: { value: '#fff' },
+      links: {
+        enable: true,
+        distance: 120,
+        color: '#999',
+        opacity: 0.4,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 0.6,
+        outModes: 'bounce',
+      },
+      number: { value: 50 },
       opacity: { value: 0.5 },
-      size: { value: 2, random: { enable: true, minimumValue: 1 } },
+      size: { value: 2 },
     },
     detectRetina: true,
   };
 
-  return <Particles id="neurons" init={particlesInit} options={particlesOptions} />;
+  // don’t render <Particles /> until the engine is loaded
+  if (!engineReady) {
+    return null;
+  }
+
+  return (
+    <Particles
+      id="neurons"
+      options={particlesOptions}
+      // you can also add a loaded callback:
+      // particlesLoaded={container => console.log(container)}
+    />
+  );
 }
