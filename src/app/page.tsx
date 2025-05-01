@@ -538,7 +538,7 @@ export default function HomePage() {
         {/* <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8"> */}
           <div
             // tabIndex="0"
-            className="flex flex-row justify-center items-stretch space-x-10"
+            className="flex flex-col items-center space-y-6 md:flex-row md:space-x-20 md:space-y-0"
           >
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center group">
               <div className="transition-transform duration-300 group-hover:scale-110"> 
