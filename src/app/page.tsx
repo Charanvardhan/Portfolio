@@ -282,7 +282,7 @@ export default function HomePage() {
           Skills
         </h2>
 
-        <div className="max-w-5xl py-8 mx-auto grid grid-cols-2 gap-8">
+        <div className="max-w-5xl py-8 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 place-items-center">
           {/* Programming & Scripting */}
           <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
             <h3 className="font-playfair text-xl text-secondary mb-4">
