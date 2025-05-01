@@ -431,21 +431,41 @@ export default function HomePage() {
 
         {/* Stats */}
         <div
-          // tabIndex="0"
-          className="flex flex-row justify-center items-stretch space-x-20"
+          className="
+            flex flex-row justify-center items-stretch 
+            space-x-4            /* small gap on mobile */
+            sm:space-x-10        /* medium gap on small tablets */
+            lg:space-x-20        /* your original gap on desktop */
+          "
         >
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2">2+</h3>
-            <p className="text-sm sm:text-base">Years Experience</p>
-          </div>
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2">10+</h3>
-            <p className="text-sm sm:text-base">Projects Completed</p>
-          </div>
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2">200+</h3>
-            <p className="text-sm sm:text-base">Problems Solved</p>
-          </div>
+          {[ 
+            { value: "2+", label: "Years Experience" },
+            { value: "10+", label: "Projects Completed" },
+            { value: "200+", label: "Problems Solved" }
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="
+                rounded-lg border bg-card text-card-foreground shadow-sm 
+                p-2 sm:p-4 md:p-6             /* smaller padding on mobile */
+                text-center transition-transform transform 
+                hover:-translate-y-4 hover:shadow-xl 
+                hover:bg-[#c0beb6] hover:text-[#594e46] duration-300
+              "
+            >
+              <h3 className="
+                text-xl sm:text-2xl md:text-3xl   /* scale value text down on mobile */
+                font-bold mb-1
+              ">
+                {stat.value}
+              </h3>
+              <p className="
+                text-xs sm:text-sm md:text-base   /* scale label down on mobile */
+              ">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
         
