@@ -285,7 +285,7 @@ export default function HomePage() {
         <div className="max-w-5xl py-8 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 place-items-center">
           {/* Programming & Scripting */}
           <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-            <h3 className="font-playfair text-xl text-secondary mb-4">
+            <h3 className="font-playfair text-lg sm:text-xl text-secondary mb-3 sm:mb-4">
               Programming & Scripting
             </h3>
             <div className="flex flex-wrap justify-center gap-8">
@@ -314,7 +314,7 @@ export default function HomePage() {
 
           {/* Frameworks & Libraries */}
           <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-            <h3 className="font-playfair text-xl text-secondary mb-4">
+            <h3 className="font-playfair text-lg sm:text-xl text-secondary mb-3 sm:mb-4">
               Frameworks & Libraries
             </h3>
             <div className="flex flex-wrap justify-center gap-8">
@@ -343,7 +343,7 @@ export default function HomePage() {
 
           {/* Tools & Platforms */}
           <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-            <h3 className="font-playfair text-xl text-secondary mb-4">
+            <h3 className="font-playfair text-lg sm:text-xl text-secondary mb-3 sm:mb-4">
               Tools & Platforms
             </h3>
             <div className="flex flex-wrap justify-center gap-8">
@@ -372,7 +372,7 @@ export default function HomePage() {
 
           {/* Databases */}
           <div className="p-6 bg-card rounded-lg shadow-md text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300">
-            <h3 className="font-playfair text-xl text-secondary mb-4">
+            <h3 className="font-playfair text-lg sm:text-xl text-secondary mb-3 sm:mb-4">
               Databases
             </h3>
             <div className="flex flex-wrap justify-center gap-8">
@@ -537,7 +537,7 @@ export default function HomePage() {
                   text-gray-300
                   text-xs sm:text-sm         /* smaller body text */
                   text-left px-2
-                  space-y-1        /* tighter list spacing */
+                  space-y-1 sm:space-y-2       /* tighter list spacing */
                 ">
                   {Array.isArray(item.description) ? (
                     <ul className="list-disc list-inside">
