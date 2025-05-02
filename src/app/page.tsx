@@ -556,42 +556,43 @@ export default function HomePage() {
       </section>
 
       <section id="certifications" className="py-8 px-6 w-full bg-black">
-        {/* Certifications */}
-        <h2 className="font-playfair text-4xl text-primary text-center mb-12 font-bold">
+        <h2 className="font-playfair text-3xl sm:text-4xl text-primary text-center mb-6 sm:mb-12 font-bold">
           Certifications
         </h2>
 
-        {/* <div className="max-w-5xl mx-auto grid grid-cols-2 gap-8"> */}
-          <div
-            // tabIndex="0"
-            className="flex flex-col items-center space-y-6 md:flex-row md:space-x-20 md:space-y-0"
-          >
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center group">
-              <div className="transition-transform duration-300 group-hover:scale-110"> 
-                <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Certified Solutions Architect Associate</h3>
-              {/* <p className="text-gray-400 text-sm sm:text-base">Problems Solved</p> */}
-              </div>
+        {/* switch to a grid so cards wrap automatically */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {[
+            "AWS Certified Solutions Architect Associate",
+            "Regression Models",
+            "AWS Computer Vision: with GluonCV",
+            "Industrial IoT on Google Cloud"
+          ].map((cert) => (
+            <div
+              key={cert}
+              className="
+                bg-card text-card-foreground border rounded-lg
+                p-4 sm:p-6 w-full h-auto
+                flex flex-col justify-center items-center text-center
+                transition-transform transform
+
+               hover:-translate-y-4 hover:shadow-xl
+               hover:bg-[#c0beb6] hover:text-[#594e46]
+                duration-300
+              "
+            >
+              <h3 className="
+                font-bold
+                text-sm sm:text-base md:text-lg
+                break-words
+                mb-2
+              ">
+                {cert}
+              </h3>
             </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center group">
-              <div className="transition-transform duration-300 group-hover:scale-110"> 
-                <h3 className="text-1xl sm:text-1xl font-bold mb-2">Regression Models</h3>
-              </div>
-            </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center group">
-              <div className="transition-transform duration-300 group-hover:scale-110"> 
-                <h3 className="text-1xl sm:text-1xl font-bold mb-2">AWS Computer Vision: with GluonCV</h3>
-              </div>
-              {/* <p className="text-gray-400 text-sm sm:text-base">Projects Completed</p> */}
-            </div>
-            <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-4 sm:p-6 text-center transition-transform transform hover:-translate-y-4 hover:shadow-xl hover:bg-[#c0beb6] hover:text-[#594e46] duration-300 w-64 h-24 flex flex-col justify-center group">
-              <div className="transition-transform duration-300 group-hover:scale-110"> 
-                <h3 className="text-1xl sm:text-1xl font-bold mb-2">Industrial IoT on Google Cloud</h3>
-              </div>
-              {/* <p className="text-gray-400 text-sm sm:text-base">Years Experience</p> */}
-            </div>
-          </div>
-      
-      {/* </div> */}
+          ))}
+        </div>
+
       </section>
 
       {/* <section id="contact" className="py-12 px-6 w-full bg-black">
