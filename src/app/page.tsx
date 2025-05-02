@@ -454,7 +454,7 @@ export default function HomePage() {
               "
             >
               <h3 className="
-                text-xl sm:text-2xl md:text-3xl   /* scale value text down on mobile */
+                text-lg sm:text-xl md:text-2xl   /* scale value text down on mobile */
                 font-bold mb-1
               ">
                 {stat.value}
