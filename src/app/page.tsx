@@ -475,39 +475,23 @@ export default function HomePage() {
         </h3>
 
         {/* Buttons */}
-        <div className="flex justify-center mb-8 gap-4">
-          <button
-            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300 ${
-              activeTab === "experience"
+        <div className="flex flex-nowrap justify-center mb-8 gap-6 overflow-x-auto">
+          {["experience", "research", "education"].map(tab => (
+            <button
+              key={tab}
+              className={`
+              px-2 py-1 text-xs
+              md:px-6 md:py-2 md:text-base
+              rounded-full font-semibold border transition-all duration-300
+              ${activeTab === tab
                 ? "bg-green-900 text-green-400 border-green-700"
-                : "bg-transparent text-green-400 border-green-700"
-            }`}
-            onClick={() => setActiveTab("experience")}
-          >
-            Experience
-          </button>
-
-          <button
-            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300 ${
-              activeTab === "research"
-                ? "bg-green-900 text-green-400 border-green-700"
-                : "bg-transparent text-green-400 border-green-700"
-            }`}
-            onClick={() => setActiveTab("research")}
-          >
-            Research
-          </button>
-
-          <button
-            className={`px-6 py-2 rounded-full font-semibold border transition-all duration-300 ${
-              activeTab === "education"
-                ? "bg-green-900 text-green-400 border-green-700"
-                : "bg-transparent text-green-400 border-green-700"
-            }`}
-            onClick={() => setActiveTab("education")}
-          >
-            Education
-          </button>
+                : "bg-transparent text-green-400 border-green-700"}
+              `}
+              onClick={() => setActiveTab(tab as "experience" | "research" | "education")}
+            >
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
         </div>
 
         {/* Invisible scroll anchors */}
