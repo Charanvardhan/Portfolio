@@ -502,7 +502,7 @@ export default function HomePage() {
         {/* Grid Content */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center">
           <AnimatePresence>
-            {(activeTab === "experience" ? experienceData :
+          {(activeTab === "experience" ? experienceData :
               activeTab === "research" ? researchData :
               educationData).map((item, index) => (
               <motion.div
@@ -511,12 +511,34 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-lg bg-green-900/20 p-6 w-full h-60 flex flex-col justify-center items-center overflow-hidden"
+                className="
+                  rounded-lg bg-green-900/20
+                  p-4 sm:p-6              /* smaller padding */
+                  w-full 
+                  h-48 sm:h-60     /* reduced height */
+                  flex flex-col justify-center items-center
+                  overflow-hidden
+                "
               >
-                <h4 className="mb-4 font-bold text-lg text-green-400 text-center">
+                <h4 className="
+                  mb-2 sm:mb-4          /* tighter bottom margin */
+                  font-bold
+                  text-base        /* smaller title */
+                  sm:text-lg       /* go back up on sm+ */
+                  text-green-400
+                  text-center
+                ">
                   {item.title}
                 </h4>
-                <div className="overflow-y-auto max-h-40 scrollbar-thin scrollbar-thumb-green-700 scrollbar-track-transparent text-gray-300 text-sm text-left px-2 space-y-2">
+                <div className="
+                  overflow-y-auto
+                  max-h-32 sm:max-h-40     /* smaller scroll area */
+                  scrollbar-thin scrollbar-thumb-green-700 scrollbar-track-transparent
+                  text-gray-300
+                  text-xs sm:text-sm         /* smaller body text */
+                  text-left px-2
+                  space-y-1        /* tighter list spacing */
+                ">
                   {Array.isArray(item.description) ? (
                     <ul className="list-disc list-inside">
                       {item.description.map((point, idx) => (
