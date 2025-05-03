@@ -6,11 +6,11 @@ export const metadata = { /* … */ }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="font-montserrat antialiased bg-black text-gray-200 scroll-smooth">
+      <body className="font-montserrat antialiased bg-black justify-center text-gray-200 scroll-smooth">
 
         {/* Header */}
         <header className="bg-[#c0beb6] shadow-md fixed top-0 w-full z-50">
-          <nav className="container mx-auto flex flex-wrap space-x-6 p-4 text-black font-bold">
+          <nav className="container mx-auto flex justify-center flex-wrap space-x-6 p-4 text-black font-bold">
           <a href="#home" className="hover:text-green-700 transition-colors duration-300">Home</a>
           <a href="#about" className="hover:text-green-700 transition-colors duration-300">About</a>
           <a href="#skills" className="hover:text-green-700 transition-colors duration-300">Skills</a>
