@@ -106,7 +106,7 @@ function Typewriter({
   }, [charIndex, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseTime])
   // text-[#594e46]
   return (
-    <p className="inline text-1xl sm:text-2xl font-playfair font-bold text-[#594e46]">
+    <p className="inline text-1xl sm:text-2xl font-playfair font-bold text-current">
       {text}
       <span className="blink-cursor">|</span>
     </p>
@@ -204,25 +204,29 @@ export default function HomePage() {
           /* control height */
           h-[60vh] max-h-[370px]
           /* background */
-          bg-[url('/images/CoverPhotoLinkedin.png')]
+          bg-[url('/images/CoverPhotoLinkedin.png')] 
           bg-cover bg-no-repeat
           bg-right 
           overflow-hidden rounded-3xl
         "
       >
         {/* dark overlay */}
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-black/70 sm:bg-black/25" />
 
         {/* content */}
         <div className="relative z-10 w-full px-6 sm:px-20">
-          <div className="max-w-md text-center space-y-5 text-black font-bold">
+        <div className="max-w-md text-center space-y-5 text-white sm:text-black font-bold">
             {/* Greeting */}
-            <h2 className="text-5xl font-playfair mb-4">
+            <h2 className="text-3xl sm:text-5xl font-playfair mb-4">
               👋 Hey, I'm Charanvardhan!
             </h2>
 
             {/* Typed roles */}
-            <Typewriter words={roles} />
+            <div className="text-white sm:text-[#594e46]">
+              <Typewriter 
+                words={roles}
+              />
+            </div>
 
             {/* Social links */}
             <div className="flex justify-center gap-8 mt-9">
@@ -232,7 +236,10 @@ export default function HomePage() {
                   alt="GitHub"
                   width={28}
                   height={32}
-                  className="hover:opacity-80"
+                  className="hover:opacity-80
+                  filter invert
+                  sm:filter-none
+                  "
                 />
               </a>
               <a href="https://www.linkedin.com/in/charanvardhanreddym/" target="_blank" rel="noopener noreferrer">
@@ -241,7 +248,9 @@ export default function HomePage() {
                   alt="LinkedIn"
                   width={32}
                   height={32}
-                  className="hover:opacity-80"
+                  className="hover:opacity-80
+                  filter invert
+                  sm:filter-none"
                 />
               </a>
               <a href="mailto:charanvardhanreddym@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -250,7 +259,9 @@ export default function HomePage() {
                   alt="Gmail"
                   width={32}
                   height={32}
-                  className="hover:opacity-80"
+                  className="hover:opacity-80
+                  filter invert
+                  sm:filter-none"
                 />
               </a>
             </div>
